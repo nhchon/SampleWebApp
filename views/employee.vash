@@ -1,0 +1,8 @@
+@html.extend('layout', function(model){
+	@html.block("content", function(model){
+		<h1>@model.name</h1>
+		<p>
+			I am an <strong>@model.designation</strong> from @model.location
+		</p>
+	});
+});

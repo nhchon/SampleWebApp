@@ -1,8 +1,19 @@
 'use strict';
 var http = require('http');
-var port = process.env.PORT || 1337;
+var express = require("express");
+var port = process.env.PORT || 8888;
 
-http.createServer(function (req, res) {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Hello World\n');
-}).listen(port);
+var app = express();
+app.set('view engine', 'vash');
+app.use(express.static(__dirname + "/resources"));
+
+var server = http.createServer(app);
+server.listen(port);
+
+app.get("/", function (req, res) {
+    res.render("index", { title: "Vash view" });
+});
+
+app.get("/emp/", function (req, res) {
+    res.render("employee", { name: "Vishnu", designation: "IT Professional", location: "Hyderabad, India" });
+});

@@ -1,0 +1,10 @@
+<html>
+	<head>
+		<title>@model.title</title>
+		<link href="/css/site.css" rel="stylesheet"/>
+	</head>
+	<body style="background: aqua">
+		<h1>@model.title</h1>
+		<p>@html.block("content")</p>
+	</body>
+</html>

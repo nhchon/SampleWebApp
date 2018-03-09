@@ -5,5 +5,9 @@
   "main": "server.js",
   "author": {
     "name": "nhchon"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "vash": "^0.12.4"
   }
 }
