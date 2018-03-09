@@ -7,7 +7,9 @@
     "name": "nhchon"
   },
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "fs": "0.0.1-security",
     "vash": "^0.12.4"
   }
 }

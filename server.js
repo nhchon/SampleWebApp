@@ -6,6 +6,7 @@ var port = process.env.PORT || 8888;
 var app = express();
 app.set('view engine', 'vash');
 app.use(express.static(__dirname + "/resources"));
+app.use
 
 var server = http.createServer(app);
 server.listen(port);
