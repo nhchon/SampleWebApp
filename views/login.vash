@@ -1,0 +1,11 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>@model.title</title>
+    <link href="css/bootstrap.min.css" rel="stulesheet" />
+  </head>
+  <body>
+    <a href="./loginform" class="btn btn-default">Login</a>
+    <a href="./register" class="btn btn-default">Register</a>
+  </body>
+  </html>
