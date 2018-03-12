@@ -1,9 +1,12 @@
 <html>
 	<head>
 		<title>@model.title</title>
-		<link href="/css/site.css" rel="stylesheet"/>
+		<link href="/css/bootstrap.min.css" rel="stylesheet"/>
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/angular.min.js"></script>
+		@html.block("head")
 	</head>
-	<body style="background: aqua">
+	<body>
 		<h1>@model.title</h1>
 		<p>@html.block("content")</p>
 	</body>

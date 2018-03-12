@@ -1,0 +1,27 @@
+@html.extend('layout', function(model) {
+  @html.block("head", function(model) {
+    <script src="js/userController.js"></script>
+  });
+  @html.block("content", function(model) {
+    <div ng-app="userView">
+      <div ng-controller="userController">
+        <table class="table table-bordered table-striped table-responseive">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="user in users">
+              <td>{{user.name}}</td>
+              <td>{{user.email}}</td>
+              <td>{{user.location}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  })
+})

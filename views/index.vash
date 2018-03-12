@@ -1,4 +1,4 @@
-@html.extend('layout', function(model){
+@html.extend('simpleLayout', function(model){
 	@html.block("content", function(model){
 		<p>This is from the server</p>
 	});

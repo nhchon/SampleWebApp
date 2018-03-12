@@ -52,5 +52,14 @@ app.post("/register", function (req, res) {
     }
 });
 
+app.get("/user", function (req, res) {
+    res.render("user", { title: "User Management" });
+});
+
+app.get("/index", function (req, res) {
+    res.render("index", { title: "User Management" });
+});
+
+
 var server = http.createServer(app);
 server.listen(port);
