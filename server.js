@@ -7,6 +7,9 @@ var fs = require("fs");
 var express = require("express");
 var port = process.env.PORT || 8888;
 
+// Controllers
+var controllers = require("./controller");
+
 // MongoDB
 var MongoClient = require("mongodb").MongoClient;
 var URL = 'mongodb://localhost:27017/userdb';
@@ -61,5 +64,9 @@ app.get("/index", function (req, res) {
 });
 
 
+// initialize Controllers
+controllers.init(app);
+
+// start the server
 var server = http.createServer(app);
 server.listen(port);
